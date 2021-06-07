@@ -4,6 +4,9 @@ import man from "../images/man.svg";
 import pauseImg from "../images/play.svg";
 import play from "../images/pause.png";
 import source from "../music/sample1.mp3";
+import selected from "../images/circlef.svg";
+import notselected from "../images/circle.svg";
+import data from "./data.js";
 
 const Home = () => {
 	return (
@@ -75,7 +78,41 @@ const Music = () => {
 };
 
 const Product = () => {
-	return <section className='productIntro'></section>;
+	const [current, setCurrent] = useState(0);
+	const handler = (index) => {
+		console.log(index);
+		setCurrent(index);
+	};
+	return (
+		<section className='productIntro'>
+			{data.map((d, index) => {
+				return (
+					<div
+						className={`Data ${
+							index === current ? "active" : "disabled"
+						}`}>
+						{index === current ? (
+							<div className='data-card'>
+								<p className='card-head'>{d.head}</p>
+								<p className='card-data'>{d.body}</p>
+							</div>
+						) : null}
+					</div>
+				);
+			})}
+			<section className='loader'>
+				{data.map((d, index) => {
+					return (
+						<img
+							src={index === current ? selected : notselected}
+							alt='default'
+							onClick={() => handler(index)}
+						/>
+					);
+				})}
+			</section>
+		</section>
+	);
 };
 
 export default Home;
