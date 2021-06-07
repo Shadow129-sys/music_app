@@ -1,5 +1,5 @@
 :root {
-	--back_color: #111010;
+	--back_color: #171616;
 }
 body {
 	margin: 0;
@@ -10,9 +10,14 @@ body {
 		"Helvetica Neue", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	height: 300vh;
 }
 
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 		monospace;
+}
+
+::-webkit-scrollbar {
+	width: 0;
 }

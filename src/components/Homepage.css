@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins&family=Russo+One&family=Sigmar+One&family=Signika+Negative&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+
+.body {
+	width: 95%;
+	font-size: 1rem;
+	height: fit-content;
+	display: flex;
+	justify-content: space-around;
+	padding-left: 2em;
+	/*border: 1px solid white;*/
+	margin-inline: auto;
+}
+
+.introbody {
+	position: relative;
+	width: 45%;
+	padding-top: 5em;
+	/*border: 2px solid white;*/
+	padding-left: 5em;
+	display: flex;
+	flex-direction: column;
+}
+
+.choice,
+.title,
+.introMsg {
+	position: relative;
+	color: #fff;
+}
+
+.choice {
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	font-family: "Poppins", sans-serif;
+	letter-spacing: 0.2em;
+}
+
+.title {
+	font-family: "Russo One", sans-serif;
+	font-size: 2.4rem;
+	top: -0.5em;
+}
+
+.introMsg {
+	font-size: 0.965rem;
+	font-family: "Poppins", sans-serif;
+	padding-right: 12em;
+	top: -2.5em;
+}
+
+.productIntro {
+	position: relative;
+	width: 50%;
+	height: 200px;
+	/*border: 2px solid wheat;*/
+}
+
+.introlower {
+	position: relative;
+	width: 100%;
+	/*border: 2px solid white;*/
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.man {
+	position: relative;
+	width: 17.5em;
+	height: 17.5em;
+	bottom: -0.28px;
+	left: -1.8em;
+	cursor: pointer;
+}
+
+.manapp {
+	position: relative;
+	width: 60%;
+	height: 100%;
+	/*border: 2px solid white;*/
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.app,
+.appdes {
+	font-size: 1rem;
+	font-family: "Poppins", sans-serif;
+	line-height: 1.5em;
+}
+
+.app {
+	color: #e24354;
+	font-weight: bolder;
+}
+
+.appdes {
+	color: rgb(116, 116, 116);
+	opacity: 1;
+	font-size: 1rem;
+}
+
+.appdownload {
+	font-family: "Josefin Sans", sans-serif;
+	color: #fff;
+	opacity: 0.8;
+}
+
+.dlines {
+	line-height: 0.4em;
+}
+
+.music {
+	position: relative;
+}
+
+.musicplayer {
+	position: absolute;
+	font-size: 1rem;
+	width: 3em;
+	height: 3em;
+	left: 43%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+}
+
+.play {
+	opacity: 0.7;
+	width: 3.2em;
+	height: 3.2em;
+}
+
+@media only screen and (max-width: 1200px) {
+	.introlower {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.man {
+		bottom: 0;
+		left: -0.5em;
+	}
+	.manapp {
+		width: 80%;
+		height: auto;
+	}
+	.play,
+	.pause {
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	.body {
+		flex-direction: column;
+		justify-content: center;
+		padding: 0;
+		width: 100vw;
+		overflow-y: hidden;
+	}
+	.introbody,
+	.productIntro {
+		width: 100%;
+	}
+	.introbody {
+		padding-left: 2em;
+		padding-top: 2em;
+	}
+	.intro {
+		padding-inline: auto;
+	}
+	.introMsg {
+		padding-right: 2em;
+	}
+	.introlower {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.man {
+		bottom: 0;
+		left: -0.5em;
+	}
+	.manapp {
+		width: 80%;
+		height: auto;
+	}
+	.play,
+	.pause {
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
