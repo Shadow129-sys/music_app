@@ -1,10 +1,23 @@
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
+import Navbar from "./components/nav";
+import Home from "./components/Homepage";
+import Error from "./components/Error";
 
 function App() {
 	return (
-		<div className='App'>
-			<h1>Hello!!!</h1>
-		</div>
+		<Router>
+			<Navbar />
+			<Switch>
+				<Route exact path='/'>
+					<Home />
+				</Route>
+				<Route path='*'>
+					<Error />
+				</Route>
+			</Switch>
+		</Router>
 	);
 }
 

@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans:wght@300&display=swap");
+
+.nav {
+	position: relative;
+	font-size: 1rem;
+	width: 99.7%;
+	height: 6em;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+}
+
+.iconBar {
+	width: 47%;
+	height: 100%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	padding-left: 5em;
+	overflow-y: hidden;
+}
+
+.iconBar > * {
+	cursor: pointer;
+	padding: 0 0.832em;
+	width: 1.33em;
+	height: 1.39em;
+}
+
+.search {
+	width: 20em;
+	font-size: 1rem;
+	height: 1.5em;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 800;
+	margin-left: 0.832em;
+}
+
+.search:focus {
+	outline: none;
+}
+
+.list {
+	position: relative;
+	width: 53%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.list-items {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	list-style: none;
+	display: flex;
+	align-items: center;
+}
+
+.list-items > li {
+	position: relative;
+	font-family: "Montserrat", sans-serif;
+	color: #fff;
+	font-size: 1rem;
+	padding: 0 1.67em;
+	cursor: pointer;
+}
+
+.list-items > li::before {
+	content: "";
+	position: absolute;
+	bottom: -1em;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 85%;
+	height: 0.15em;
+	background-color: #fff504;
+	z-index: 10;
+	opacity: 0;
+	transition: all 0.35s ease-out;
+}
+
+.list-items > li:hover::before {
+	opacity: 0.7;
+}
+
+.list-items:nth-child(1) {
+	padding-left: 0;
+}
+
+.back {
+	position: fixed;
+	z-index: -2;
+	left: 27.78em;
+	top: -0.7em;
+	transform-origin: "center";
+	transform: scale(1.23);
+}
+
+@media only screen and (max-width: 800px) {
+	.nav {
+		flex-direction: column;
+		height: 4em;
+	}
+	.iconBar {
+		width: 100%;
+		padding-left: 0 2em;
+	}
+	.list {
+		display: none;
+	}
+	.back {
+		left: auto;
+		transform: scale(0.8);
+		top: -10em;
+		right: -35em;
+	}
+}
