@@ -57,6 +57,7 @@
 .productIntro {
 	position: relative;
 	width: 50%;
+	overflow: hidden;
 	/*border: 2px solid wheat;*/
 }
 
@@ -138,13 +139,17 @@
 }
 
 .Data {
+	position: relative;
+	top: 2em;
 	opacity: 0;
-	transition: all 1s ease;
+	transition: all 0.78s ease-out;
 	color: #fff;
 }
 .Data.active {
+	position: relative;
 	opacity: 1;
-	transition: all 1s ease;
+	top: 0;
+	transition: all 0.78s ease;
 }
 
 .data-card {
