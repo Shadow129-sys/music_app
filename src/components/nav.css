@@ -74,6 +74,7 @@
 	transform: translateX(-50%);
 	width: 85%;
 	height: 0.15em;
+	border-radius: 0.15em;
 	background-color: #fff504;
 	z-index: 10;
 	opacity: 0;
