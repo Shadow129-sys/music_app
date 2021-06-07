@@ -17,7 +17,7 @@
 	position: relative;
 	width: 45%;
 	padding-top: 5em;
-	/*border: 2px solid white;*/
+	/*border: 1px solid white;*/
 	padding-left: 6em;
 	display: flex;
 	flex-direction: column;
@@ -56,15 +56,15 @@
 
 .productIntro {
 	position: relative;
-	width: 50%;
+	width: 100%;
 	overflow: hidden;
-	/*border: 2px solid wheat;*/
+	/*border: 1px solid wheat;*/
 }
 
 .introlower {
 	position: relative;
 	width: 100%;
-	/*border: 2px solid white;*/
+	/*border: 1px solid white;*/
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -83,7 +83,7 @@
 	position: relative;
 	width: 60%;
 	height: 100%;
-	/*border: 2px solid white;*/
+	/*border: 1px solid white;*/
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -142,14 +142,14 @@
 	position: relative;
 	top: 2em;
 	opacity: 0;
-	transition: all 0.78s ease-out;
+	transition: all 1s ease-in;
 	color: #fff;
 }
 .Data.active {
 	position: relative;
 	opacity: 1;
 	top: 0;
-	transition: all 0.78s ease;
+	transition: all 1s ease;
 }
 
 .data-card {
@@ -185,6 +185,60 @@
 	transform-origin: center;
 	transform: scale(0.8);
 	cursor: pointer;
+}
+
+.products {
+	position: relative;
+	width: 50%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.card-viewer {
+	position: relative;
+	width: 100%;
+	font-size: 1rem;
+	height: 30em;
+	/*border: 1px solid white;*/
+	overflow: hidden;
+}
+
+.sample {
+	position: absolute;
+	opacity: 0;
+	left: 5em;
+	transition: all 1.5s ease-out;
+	height: inherit;
+	width: inherit;
+}
+.sample.active {
+	position: absolute;
+	opacity: 1;
+	left: 0;
+	transition: all 2s ease;
+}
+
+.product-img {
+	position: relative;
+	height: inherit;
+	width: auto;
+}
+.shifter {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	padding-right: 2em;
+	justify-content: flex-end;
+	/*border: 1px solid white;*/
+}
+.go {
+	cursor: pointer;
+	transform-origin: center;
+	transform: scale(0.7);
 }
 
 @media only screen and (max-width: 1200px) {
@@ -259,5 +313,14 @@
 	}
 	.manapp > * {
 		margin-block: 1em;
+	}
+	.products {
+		width: 100%;
+	}
+	.card-viewer {
+		height: 20em;
+	}
+	.go {
+		transform: scale(0.5);
 	}
 }

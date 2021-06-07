@@ -7,6 +7,11 @@ import source from "../music/sample1.mp3";
 import selected from "../images/circlef.svg";
 import notselected from "../images/circle.svg";
 import data from "./data.js";
+import ImgData from "./imagedata";
+import laA from "../images/leftarrowE.svg";
+import lad from "../images/leftarrowD.svg";
+import raA from "../images/rightarrowE.svg";
+import rad from "../images/rightarrowD.svg";
 
 const Home = () => {
 	return (
@@ -84,34 +89,85 @@ const Product = () => {
 		setCurrent(index);
 	};
 	return (
-		<section className='productIntro'>
-			{data.map((d, index) => {
+		<div className='products'>
+			<Headphones />
+			<section className='productIntro'>
+				{data.map((d, index) => {
+					return (
+						<div
+							className={`Data ${
+								index === current ? "active" : "disabled"
+							}`}>
+							{index === current ? (
+								<div className='data-card'>
+									<p className='card-head'>{d.head}</p>
+									<p className='card-data'>{d.body}</p>
+								</div>
+							) : null}
+						</div>
+					);
+				})}
+				<section className='loader'>
+					{data.map((d, index) => {
+						return (
+							<img
+								src={index === current ? selected : notselected}
+								alt='default'
+								onClick={() => handler(index)}
+							/>
+						);
+					})}
+				</section>
+			</section>
+		</div>
+	);
+};
+
+const Headphones = () => {
+	const [currentImg, setCurrentImg] = useState(0);
+	const len = ImgData.length;
+	const LeftHandler = () => {
+		if (currentImg === 0) return;
+		setCurrentImg(currentImg - 1);
+	};
+	const RightHandler = () => {
+		if (currentImg === len - 1) return;
+		setCurrentImg(currentImg + 1);
+	};
+	console.log(len);
+	return (
+		<div className='card-viewer'>
+			{ImgData.map((d, index) => {
 				return (
 					<div
-						className={`Data ${
-							index === current ? "active" : "disabled"
+						className={`sample ${
+							currentImg === index ? "active" : "disable"
 						}`}>
-						{index === current ? (
-							<div className='data-card'>
-								<p className='card-head'>{d.head}</p>
-								<p className='card-data'>{d.body}</p>
-							</div>
+						{currentImg === index ? (
+							<img
+								className='product-img'
+								src={d}
+								alt='default'
+							/>
 						) : null}
 					</div>
 				);
 			})}
-			<section className='loader'>
-				{data.map((d, index) => {
-					return (
-						<img
-							src={index === current ? selected : notselected}
-							alt='default'
-							onClick={() => handler(index)}
-						/>
-					);
-				})}
-			</section>
-		</section>
+			<div className='shifter'>
+				<img
+					className='go left'
+					src={currentImg === 0 ? lad : laA}
+					alt='left'
+					onClick={LeftHandler}
+				/>
+				<img
+					className='go right'
+					src={currentImg === len - 1 ? rad : raA}
+					alt='left'
+					onClick={RightHandler}
+				/>
+			</div>
+		</div>
 	);
 };
 
