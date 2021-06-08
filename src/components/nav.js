@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useMediaQuery } from "@material-ui/core";
-import main from "../images/mainicon.svg";
-import icon from "../images/icon1.svg";
-import search from "../images/searchicon.svg";
-import menu from "../images/menu.svg";
-import background from "../images/backB.svg";
+import main from "../images/icons/mainicon.svg";
+import icon from "../images/icons/icon1.svg";
+import search from "../images/icons/searchicon.svg";
+import menu from "../images/icons/menu.svg";
+import background from "../images/icons/backB.svg";
 import "./nav.css";
 
 const Navbar = () => {
@@ -45,7 +45,7 @@ const Navbar = () => {
 							src={menu}
 							style={{
 								position: "absolute",
-								right: "3em",
+								right: "1em",
 								transformOrigin: "center",
 								transform: "scale(0.8)",
 							}}

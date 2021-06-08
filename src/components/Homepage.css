@@ -219,7 +219,12 @@
 	left: 0;
 	transition: all 2s ease;
 }
-
+.sample a {
+	position: absolute;
+	height: inherit;
+	width: auto;
+	z-index: 4;
+}
 .product-img {
 	position: relative;
 	height: inherit;
@@ -236,6 +241,7 @@
 	/*border: 1px solid white;*/
 }
 .go {
+	z-index: 6;
 	cursor: pointer;
 	transform-origin: center;
 	transform: scale(0.7);

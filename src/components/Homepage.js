@@ -1,22 +1,22 @@
 import React, { useState } from "react";
 import "./Homepage.css";
-import man from "../images/man.svg";
-import pauseImg from "../images/play.svg";
-import play from "../images/pause.png";
+import man from "../images/icons/man.svg";
+import pauseImg from "../images/icons/play.svg";
+import play from "../images/icons/pause.png";
 import source from "../music/sample1.mp3";
-import selected from "../images/circlef.svg";
-import notselected from "../images/circle.svg";
-import data from "./data.js";
-import ImgData from "./imagedata";
-import laA from "../images/leftarrowE.svg";
-import lad from "../images/leftarrowD.svg";
-import raA from "../images/rightarrowE.svg";
-import rad from "../images/rightarrowD.svg";
+import selected from "../images/icons/circlef.svg";
+import notselected from "../images/icons/circle.svg";
+import data from "./data/data.js";
+import ImgData from "./data/imagedata";
+import laA from "../images/icons/leftarrowE.svg";
+import lad from "../images/icons/leftarrowD.svg";
+import raA from "../images/icons/rightarrowE.svg";
+import rad from "../images/icons/rightarrowD.svg";
 
 const Home = () => {
 	return (
 		<div className='body'>
-			<Intro></Intro>
+			<Intro />
 			<Product />
 		</div>
 	);
@@ -144,11 +144,13 @@ const Headphones = () => {
 							currentImg === index ? "active" : "disable"
 						}`}>
 						{currentImg === index ? (
-							<img
-								className='product-img'
-								src={d}
-								alt='default'
-							/>
+							<a href={d.link}>
+								<img
+									className='product-img'
+									src={d.img}
+									alt='default'
+								/>
+							</a>
 						) : null}
 					</div>
 				);
