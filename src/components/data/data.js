@@ -9,7 +9,7 @@ const data = [
 	},
 	{
 		head: "AirPods",
-		body: "The new AirPods combine intelligent design with breakthrough technology and crystal-clear sound. Powered by the new Apple H1 headphone chip, AirPods now feature hands-free access to Siri using just your voice. And up to 3 hours of talk time on a single charge.",
+		body: "Only at Best Buy Enjoy uncluttered listening with these Airpods. Bluetooth compatibility and four-microphone technology let you experience a seamless, stable connection, and the portable charging case ensures up to 15 hours of listening time. These Jabra Elite wireless earbuds let you adjust sound quality and customizable equalizer app.",
 	},
 ];
 
