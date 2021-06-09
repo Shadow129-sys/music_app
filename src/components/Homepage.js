@@ -12,13 +12,17 @@ import laA from "../images/icons/leftarrowE.svg";
 import lad from "../images/icons/leftarrowD.svg";
 import raA from "../images/icons/rightarrowE.svg";
 import rad from "../images/icons/rightarrowD.svg";
+import Lowerproduct from "./Lowerproducts";
 
 const Home = () => {
 	return (
-		<div className='body'>
-			<Intro />
-			<Product />
-		</div>
+		<>
+			<div className='body'>
+				<Intro />
+				<Product />
+			</div>
+			<Lowerproduct />
+		</>
 	);
 };
 
