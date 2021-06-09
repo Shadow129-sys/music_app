@@ -48,7 +48,7 @@
 	top: -7em;
 	left: -12em;
 	z-index: 2;
-	transform: rotateZ(-45deg);
+	transform: rotateZ(-45deg) translateY(-20px);
 	transition: all 0.5s;
 	opacity: 1;
 }
@@ -158,7 +158,7 @@
 }
 
 .l-card:hover .card-back {
-	transform: rotateZ(30deg);
+	transform: translateY(10px) rotateZ(30deg);
 	left: -10em;
 }
 
