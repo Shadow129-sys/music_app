@@ -207,4 +207,8 @@
 	.hover-back2 {
 		height: 150%;
 	}
+	.desc-layer {
+		background-color: rgba(0, 0, 0, 0.3);
+		padding-bottom: 2em;
+	}
 }
