@@ -1,6 +1,6 @@
-import p1 from "../../images/people/p2.png";
-import p2 from "../../images/people/rand1.png";
-import p3 from "../../images/people/p3.png";
+import p1 from "../../images/people/ph1.png";
+import p2 from "../../images/people/ph2.png";
+import p3 from "../../images/people/ph3.png";
 
 const data = [
 	{

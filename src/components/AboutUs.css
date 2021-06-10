@@ -34,13 +34,14 @@
 	transform: translateX(-50%);
 	border-radius: 50%;
 	overflow: hidden;
-	/*border: 0.67em solid rgba(0, 0, 0, 0.3);*/
+	border: 10px solid rgba(0, 0, 0, 0.3);
 	opacity: 0.65;
 	transition: all 0.4s ease-in-out;
 	cursor: pointer;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	/*border: 10px solid white;*/
 }
 
 .person img {
@@ -99,7 +100,7 @@
 .profile-card:hover .person {
 	top: 2em;
 	opacity: 1;
-	box-shadow: 0 0 2em rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 2em 0.2em rgba(0, 0, 0, 0.5);
 }
 
 .profile-details {
@@ -148,5 +149,45 @@
 .person:hover img {
 	transform-origin: center;
 	transform: scale(1.15);
-	filter: blur(1.5px);
+	filter: blur(2px);
+}
+
+.company-body {
+	position: relative;
+	width: 95%;
+	margin-inline: auto;
+	height: fit-content;
+	/*border: 1px solid white;*/
+	padding-bottom: 2em;
+}
+
+.company-title {
+	font-family: "Charmonman", cursive;
+	font-size: 2.5rem;
+	color: #b2a2b7;
+	/*border: 1px solid white;*/
+	text-align: center;
+}
+
+.company-text {
+	position: relative;
+	width: 75%;
+	font-size: 1rem;
+	color: rgba(255, 255, 255, 0.6);
+	/*border: 1px solid white;*/
+	margin: auto;
+	font-family: "Poppins", sans-serif;
+}
+
+@media only screen and (max-width: 1200px) {
+	.company-text {
+		width: 90%;
+	}
+}
+
+@media only screen and (max-width: 420px) {
+	.company-card {
+		width: 18em;
+		height: 10.5em;
+	}
 }

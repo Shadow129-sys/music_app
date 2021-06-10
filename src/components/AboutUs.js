@@ -7,7 +7,12 @@ import "./AboutUs.css";
 import data from "./data/personData";
 
 const About = () => {
-	return <Cards />;
+	return (
+		<>
+			<Cards />
+			<Body />
+		</>
+	);
 };
 
 const Cards = () => {
@@ -46,4 +51,19 @@ const Card = ({ name, role, img }) => {
 	);
 };
 
+const Body = () => {
+	return (
+		<div className='company-body'>
+			<h1 className='company-title'>Our Company</h1>
+			<p className='company-text'>
+				We believe a headphone is more than just an instrument for
+				sound.It’s the key to a mind-blowing moment of emotion, bringing
+				you closer to your music, and yourself.We’ve curated the world’s
+				finest headphones and earphones to help you discover the riffs,
+				percussions, baselines and solos that were always there but
+				never heard.
+			</p>
+		</div>
+	);
+};
 export default About;
