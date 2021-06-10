@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap");
+
+.profile-card-holder {
+	position: relative;
+	width: 90%;
+	margin-inline: auto;
+	/*border: 1px solid white;*/
+	height: fit-content;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.profile-card {
+	position: relative;
+	top: 0;
+	font-size: 1rem;
+	height: 23em;
+	width: 18em;
+	background-color: rgba(255, 255, 255, 0.05);
+	backdrop-filter: blur(10px);
+	border-radius: 1em;
+	margin: 2em 1em;
+	transition: all 0.3s linear;
+}
+
+.person {
+	position: absolute;
+	width: 8.3em;
+	height: 8.3em;
+	top: 3em;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 50%;
+	overflow: hidden;
+	border: 0.67em solid rgba(0, 0, 0, 0.3);
+	opacity: 0.65;
+	transition: all 0.4s ease-in-out;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.person img {
+	width: 105%;
+	height: 105%;
+	transition: all 0.5s ease-out;
+}
+
+.social-media-links {
+	position: absolute;
+	left: 0;
+	top: 17em;
+	height: 5em;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/*border: 1px solid white;*/
+}
+
+.social-links {
+	position: relative;
+	top: 5em;
+	font-size: 1rem;
+	height: 2.2em;
+	width: 2.2em;
+	/*border: 1px solid white;*/
+	margin: 0 0.7em;
+	transition: all 0.27s ease-in-out;
+	opacity: 0;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.linkedin {
+	transition-delay: 0.135s;
+}
+
+.insta {
+	transition-delay: 0.27s;
+}
+
+.tw {
+	transition-delay: 0.405s;
+}
+
+.profile-card:hover .social-links {
+	top: 0;
+	opacity: 1;
+}
+
+.profile-card:hover {
+	top: -1.5em;
+}
+
+.profile-card:hover .person {
+	top: 2em;
+	opacity: 1;
+}
+
+.profile-details {
+	position: absolute;
+	left: 0;
+	top: 12em;
+	width: 100%;
+	height: auto;
+	/*border: 1px solid white;*/
+	z-index: -1;
+	opacity: 0.65;
+	transition: all 0.4s ease-in-out;
+}
+
+.person-name {
+	position: relative;
+	top: -0.5em;
+	width: 100%;
+	font-size: 1.9rem;
+	color: #fff;
+	/*border: 1px solid white;*/
+	font-family: "Charmonman", cursive;
+	text-align: center;
+	margin-bottom: -0.5em;
+}
+
+.person-role {
+	position: relative;
+	top: -1.2em;
+	width: 100%;
+	font-size: 1.1rem;
+	color: #fff;
+	/*border: 1px solid white;*/
+	font-family: "Josefin Sans", sans-serif;
+	letter-spacing: 0.05em;
+	text-align: center;
+}
+
+.profile-card:hover .profile-details {
+	top: 11em;
+	opacity: 1;
+	transform-origin: center;
+	transform: scale(0.85);
+}
+
+.person:hover img {
+	transform-origin: center;
+	transform: scale(1.15);
+	filter: blur(5px);
+}

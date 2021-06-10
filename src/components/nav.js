@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { useMediaQuery } from "@material-ui/core";
 import main from "../images/icons/mainicon.svg";
 import icon from "../images/icons/icon1.svg";
@@ -55,18 +56,26 @@ const Navbar = () => {
 				{!phone ? (
 					<div className='list'>
 						<ul className='list-items'>
-							<li>
-								About us<span></span>
-							</li>
-							<li>
-								Models<span></span>
-							</li>
-							<li>
-								Reviews<span></span>
-							</li>
-							<li>
-								Add Cart<span></span>
-							</li>
+							<Link to='/about' className='li'>
+								<li>
+									About us<span></span>
+								</li>
+							</Link>
+							<Link to='/company' className='li'>
+								<li>
+									Company<span></span>
+								</li>
+							</Link>
+							<Link to='/about' className='li'>
+								<li>
+									Reviews<span></span>
+								</li>
+							</Link>
+							<Link to='/about' className='li'>
+								<li>
+									Add Cart<span></span>
+								</li>
+							</Link>
 						</ul>
 					</div>
 				) : null}

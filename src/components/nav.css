@@ -8,6 +8,7 @@
 	display: flex;
 	align-items: center;
 	overflow: hidden;
+	/*border: 1px solid white;*/
 }
 
 .iconBar {
@@ -57,16 +58,24 @@
 	align-items: center;
 }
 
-.list-items > li {
+.list-items {
+	text-decoration: none;
+}
+
+.list-items .li {
 	position: relative;
 	font-family: "Montserrat", sans-serif;
 	color: #fff;
 	font-size: 1rem;
 	padding: 0 1.67em;
 	cursor: pointer;
+	text-decoration: wavy;
+	/*border: 1px solid white;*/
+	overflow: visible;
+	z-index: 2;
 }
 
-.list-items > li::before {
+.list-items .li::before {
 	content: "";
 	position: absolute;
 	bottom: -1em;
@@ -81,7 +90,7 @@
 	transition: all 0.35s ease-out;
 }
 
-.list-items > li:hover::before {
+.list-items .li:hover::before {
 	opacity: 0.7;
 }
 
