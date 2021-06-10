@@ -56,7 +56,7 @@ const Navbar = () => {
 				{!phone ? (
 					<div className='list'>
 						<ul className='list-items'>
-							<Link to='/about' className='li'>
+							<Link to='/' className='li'>
 								<li>
 									About us<span></span>
 								</li>
@@ -66,12 +66,12 @@ const Navbar = () => {
 									Company<span></span>
 								</li>
 							</Link>
-							<Link to='/about' className='li'>
+							<Link to='/' className='li'>
 								<li>
 									Reviews<span></span>
 								</li>
 							</Link>
-							<Link to='/about' className='li'>
+							<Link to='/' className='li'>
 								<li>
 									Add Cart<span></span>
 								</li>
