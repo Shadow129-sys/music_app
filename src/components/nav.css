@@ -107,6 +107,11 @@
 	transform: scale(1.23);
 }
 
+.main-icon {
+	width: 1.5em;
+	height: 1.5em;
+}
+
 @media only screen and (max-width: 800px) {
 	.nav {
 		flex-direction: column;

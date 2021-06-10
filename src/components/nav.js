@@ -35,7 +35,12 @@ const Navbar = () => {
 							transform: "scale(0.65)",
 						}}
 						alt='default img'></img>
-					<img src={main} alt='default img'></img>
+					<Link to='/'>
+						<img
+							src={main}
+							alt='default img'
+							className='main-icon'></img>
+					</Link>
 					<img
 						src={search}
 						alt='default img'
