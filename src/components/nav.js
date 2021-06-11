@@ -35,7 +35,7 @@ const Navbar = () => {
 							transform: "scale(0.65)",
 						}}
 						alt='default img'></img>
-					<Link to='/'>
+					<Link to='/music_app'>
 						<img
 							src={main}
 							alt='default img'
@@ -61,22 +61,22 @@ const Navbar = () => {
 				{!phone ? (
 					<div className='list'>
 						<ul className='list-items'>
-							<Link to='/' className='li'>
+							<Link to='/music_app' className='li'>
 								<li>
 									About us<span></span>
 								</li>
 							</Link>
-							<Link to='/company' className='li'>
+							<Link to='/music_app/company' className='li'>
 								<li>
 									Company<span></span>
 								</li>
 							</Link>
-							<Link to='/' className='li'>
+							<Link to='/music_app' className='li'>
 								<li>
 									Reviews<span></span>
 								</li>
 							</Link>
-							<Link to='/' className='li'>
+							<Link to='/music_app' className='li'>
 								<li>
 									Add Cart<span></span>
 								</li>

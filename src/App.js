@@ -11,10 +11,10 @@ function App() {
 		<Router>
 			<Navbar />
 			<Switch>
-				<Route exact path='/'>
+				<Route exact path='/music_app'>
 					<Home />
 				</Route>
-				<Route path='/company'>
+				<Route path='/music_app/company'>
 					<Company />
 				</Route>
 				<Route path='*'>
